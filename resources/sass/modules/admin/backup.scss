@@ -1,0 +1,15 @@
+.backup__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(75);
+}
+
+.backup__link {
+  display: inline-flex;
+}
+
+.backup__link-img {
+  width: rem(40);
+  height: rem(40);
+}

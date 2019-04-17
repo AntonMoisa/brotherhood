@@ -1,0 +1,94 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: #22445b;
+}
+
+.login__form {
+  width: rem(400);
+  padding: rem(50);
+  background: #ffffff;
+}
+
+.login__form-title {
+  margin-bottom: rem(40);
+  padding-bottom: rem(10);
+  font-family: $medium;
+  font-size: rem(20);
+  line-height: rem(24);
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid #162b3a;
+}
+
+// Login form
+.login-form {
+  width: 100%;
+}
+
+.login-form__block:not(:last-child) {
+  margin-bottom: rem(20);
+}
+
+.login-form__block-title {
+  display: block;
+  margin-bottom: rem(10);
+  font-family: $regular;
+  font-size: rem(15);
+  line-height: rem(18);
+  color: $textColor;
+}
+
+.login-form__field {
+  width: 100%;
+  padding: rem(10);
+  font-family: $regular;
+  font-size: rem(15);
+  line-height: rem(20);
+  color: $textColor;
+  background: #f9f9f9;
+  border: 1px solid #a2a1a1;
+}
+
+.login-form__block--recaptcha {
+  text-align: center;
+  border: 1px solid #a2a1a1;
+}
+
+.login-form__submit {
+  width: 100%;
+  padding: rem(10);
+  font-family: $regular;
+  font-size: rem(15);
+  line-height: rem(20);
+  color: #ffffff;
+  background: #162b3a;
+  border: 1px solid #a2a1a1;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: $transition;
+}
+
+.login-form__submit:hover,
+.login-form__submit:focus {
+  background: lighten(#162b3a, 5%);
+}
+
+.login-form__link {
+  display: block;
+  font-family: $regular;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-align: right;
+  color: $textColor;
+  transition: $transition;
+}
+
+.login-form__link:hover,
+.login-form__link:focus {
+  text-decoration: underline;
+}

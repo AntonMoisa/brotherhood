@@ -1,0 +1,55 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.modal {
+  position: relative;
+  z-index: 9999;
+  min-width: rem(450);
+  padding: rem(25) rem(55);
+  background: #ffffff;
+  border: 1px solid #7b7b7b;
+  border-radius: rem(10);
+
+  .modal-header {
+    margin-bottom: rem(30);
+    font-size: rem(25);
+    color: $mainTextAdmin;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(22);
+  }
+
+  .modal-btn {
+    display: block;
+    width: rem(140);
+    font-size: rem(20);
+  }
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  transform: scale(1.2);
+}

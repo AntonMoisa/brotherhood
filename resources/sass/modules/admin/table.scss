@@ -1,0 +1,59 @@
+// Table
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table thead {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+table thead th {
+  padding: rem(15) rem(25);
+  font-size: rem(23);
+  font-weight: 300;
+  text-align: left;
+  color: $mainTextAdmin;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #c4c4c4;
+}
+
+table td {
+  padding: rem(15) rem(25);
+  font-size: rem(20);
+  color: $mainTextAdmin;
+}
+
+table td a {
+  color: $mainTextAdmin;
+}
+
+.table-controls__list {
+  display: flex;
+}
+
+.table-controls__item {
+  margin-right: rem(15);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.table-controls__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(20);
+  height: rem(20);
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.table-controls__item-img {
+  fill: $mainTextAdmin;
+}

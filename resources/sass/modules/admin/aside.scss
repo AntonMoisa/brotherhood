@@ -1,0 +1,86 @@
+.page-aside {
+  flex: 0 0 rem(360);
+  height: 100%;
+  padding: rem(60) 0;
+  background: #2b335b;
+}
+
+.nav__link,
+.nav__item > .submenu__title {
+  display: flex;
+  align-items: center;
+  padding: rem(12) 0;
+  padding-left: rem(30);
+  font-size: rem(25);
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.submenu__title:hover,
+.nav__item.active .nav__link,
+.submenu__item.active {
+  border-bottom: 1px solid #ffffff;
+}
+
+.nav__link-img,
+.submenu__img {
+  flex: 0 0 rem(30);
+  height: rem(30);
+  margin-right: rem(10);
+  font-size: rem(30);
+  fill: #ffffff;
+}
+
+.nav__link-text {
+  line-height: 1;
+  color: #ffffff;
+}
+
+.submenu__list {
+  margin-left: rem(70);
+}
+
+.submenu__link,
+.submenu__title {
+  position: relative;
+  display: block;
+  padding: rem(10) 0;
+  padding-right: rem(25);
+  padding-left: rem(15);
+  font-size: rem(25);
+  line-height: 1;
+  font-weight: 300;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+}
+
+h4.submenu__title::before,
+.submenu__link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 1px;
+  background: #ffffff;
+  transform: translateY(-50%);
+}
+
+.submenu__title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: rem(25);
+  width: rem(20);
+  height: rem(15);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='15px' viewBox='0 0 284.929 284.929'%3E%3Cpath fill='%23ffffff' d='m282.08 76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856-2.471 0-4.661 0.95-6.563 2.856l-112.21 112.2-112.2-112.2c-1.903-1.906-4.093-2.856-6.567-2.856-2.475 0-4.665 0.95-6.567 2.856l-14.272 14.274c-1.906 1.902-2.856 4.092-2.856 6.567 0 2.473 0.953 4.663 2.856 6.565l133.04 133.05c1.902 1.903 4.093 2.854 6.567 2.854s4.661-0.951 6.562-2.854l133.05-133.05c1.902-1.903 2.847-4.093 2.847-6.565 0-2.475-0.945-4.665-2.847-6.571z'/%3E%3C/svg%3E%0A") center/contain no-repeat;
+  transform: translateY(-50%);
+}
+
+.submenu__title.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}

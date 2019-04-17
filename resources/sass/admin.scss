@@ -1,0 +1,227 @@
+// Fonts
+@import "components/fonts";
+
+// Mixins
+@import "components/mixins";
+
+// Variables
+@import "components/variables";
+
+// Normalize
+@import "components/normalize";
+
+// Bootstrap
+// @import "~bootstrap/scss/bootstrap";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html {
+  height: 100%;
+  font-size: 100%;
+
+  @media (max-width: 1680px) {
+    font-size: 75%;
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $light;
+  line-height: 1.42;
+  color: #ffffff;
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  width: 1230px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden,
+input[type="file"].visually-hidden {
+  position: absolute;
+  bottom: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+          clip-path: inset(100%);
+
+  -webkit-clip-path: inset(100%);
+}
+
+
+// Buttons
+.btn {
+  display: flex;
+  align-items: center;
+  padding: rem(10) rem(20);
+  font-size: rem(25);
+  color: #ffffff;
+  background: #2b335b;
+  border: 1px solid #2b335b;
+  border-radius: 10px;
+  box-shadow: 4px 3px 18px 2px rgba(14, 15, 15, 0.4);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  color: #2b335b;
+  background: #ffffff;
+}
+
+.btn svg {
+  margin-right: rem(10);
+  transition: 0.3s ease-in-out;
+  fill: #ffffff;
+}
+
+.btn:hover svg,
+.btn:focus svg {
+  fill: #2b335b;
+}
+
+.btn--inverse {
+  color: #2b335b;
+  background: #ffffff;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background: #2b335b;
+  }
+}
+
+.page-content {
+  display: flex;
+  flex: 1 0 auto;
+  background: #d8d8d8;
+}
+
+.page-main {
+  width: calc(100% - #{rem(360)});
+  padding: rem(60);
+}
+
+.section {
+  padding: rem(35) rem(50);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 8px 6px 18px 2px rgba(14, 15, 15, 0.3);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(15);
+  padding-bottom: rem(20);
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.section-header__title {
+  font-size: rem(30);
+  font-weight: 300;
+  color: $mainTextAdmin;
+}
+
+.section-body {
+  color: $mainTextAdmin;
+}
+
+.section-close {
+  display: block;
+  width: rem(30);
+  height: rem(30);
+  padding: rem(5);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    width: rem(20);
+    height: rem(20);
+    fill: #2b335b;
+  }
+}
+
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: rem(30);
+}
+
+.pagination__info {
+  margin: 0 rem(20);
+  color: #000000;
+}
+
+
+@import "modules/login.scss";
+@import "modules/admin/header.scss";
+@import "modules/admin/aside.scss";
+@import "modules/admin/main.scss";
+@import "modules/admin/footer.scss";
+@import "modules/admin/dashboard.scss";
+@import "modules/admin/users.scss";
+@import "modules/admin/project.scss";
+@import "modules/admin/backup.scss";
+@import "modules/admin/quotes.scss";
+
+
+@import "modules/admin/modal.scss";
+@import "modules/admin/table.scss";
+@import "modules/admin/form.scss";
